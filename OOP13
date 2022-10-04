@@ -1,0 +1,45 @@
+#Assignment Task -1
+#* Import mother and father attribute
+#* Add two new attributes in child constructor
+class Father():
+    
+    def __init__(self):
+        self.Fatername = None
+        self.fname = None
+        self.color = 'white'
+        self.hair_color = 'brownish'
+        self.height = '5.9 feet'
+        
+        
+    def father_speak(self):
+        return "oppps!"
+    
+    
+class Mother():
+    def __init__(self):
+        self.Mothername = None
+        self.fname = None
+        self.color = 'Brown'
+        self.hair_color = 'dark black'
+        self.height = '5.2 feet'
+        
+        
+    def mother_slient(self):
+        return "..."
+
+class Child(Father, Mother):
+       def __init__(self):
+        super().__init__()
+        self.childName = None
+        self.childLanguage = None
+
+f1 = Father()
+m1 = Mother()
+c1 = Child()
+print([i for i in dir(f1) if "__" not in i])
+print([i for i in dir(m1) if "__" not in i])
+print([i for i in dir(c1) if "__" not in i])
+
+['Fatername', 'color', 'father_speak', 'fname', 'hair_color', 'height']
+['Mothername', 'color', 'fname', 'hair_color', 'height', 'mother_slient']
+['Fatername', 'childLanguage', 'childName', 'color', 'father_speak', 'fname', 'hair_color', 'height', 'mother_slient']
